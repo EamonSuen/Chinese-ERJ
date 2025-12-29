@@ -21,11 +21,10 @@
 
 
 \PassOptionsToPackage{no-math}{fontspec}
-\RequirePackage[UTF8, scheme=plain,punct=kaiming,space=auto]{ctex}
+\RequirePackage[UTF8, scheme=plain,punct=kaiming,space=auto,fontset=fandol]{ctex}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{newtxtext}
 % \RequirePackage{newtxtt}
-
 
 \RequirePackage{amsmath,amssymb}
 
@@ -183,7 +182,8 @@
   \let \footnote \thanks
     {\huge \@title \par}%
     \vskip 2em%
-    {\Large
+    {%
+      \Large \kaishu
       \begin{tabular}[t]{c}%
         \@author
       \end{tabular}
