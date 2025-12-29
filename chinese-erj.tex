@@ -1,15 +1,14 @@
 \documentclass{chinese-erj}
 
-\title{\href{https://github.com/EthanDeng/Chinese-ERJ}{Chinese-ERJ}：《经济研究》杂志 \LaTeX{} 模板 \thanks{感谢~\href{https://github.com/hushidong}{Hu Zhenzhen} 为本模板定制参考文献样式文件：chinese-erj，文责自负。}}
-\author{邓明哲\\ Elegant\LaTeX{} \and 黄小帅 \\ \TeX{} User Group}
+\title{您的论文标题 \thanks{本研究得到国家自然科学基金项目（编号：xxxx）的资助。感谢匿名审稿人的宝贵意见。文责自负。}}
+\author{王倩 \quad 孙翊铭 \\ 吉林大学经济学院}
 \date{}
-
-\header{Chinese-ERJ：《经济研究》杂志 \LaTeX{} 模板}
+\header{工作论文}
 
 % Enlish Titlepage
-\entitle{\LaTeX{} Template for \textit{Economic Research} Journal}
-\enauthor{Elegant\LaTeX{} Program}
-\eninstitute{School of Economics，Fudan University}
+\entitle{My Working Paper Title}
+\enauthor{Qian Wang \quad Yiming Sun} % 修改英文作者和单位
+\eninstitute{School of Economics, Jilin University}
 \enabstract{
 \lipsum*[3]\par
 \lipsum*[5]\par
@@ -32,16 +31,19 @@
 
 \section{实证检验}
 \zhlipsum[7-10] 通过研究 \cite{zheng2012nascent} \textcite{zheng2012nascent}
-
 \subsection{中文}
 \textcite{cn1} 通过研究 \zhlipsum*[1], \textcite{cn2,cn3} 发现 \zhlipsum*[2] 这些研究为我们提供了很好的参考价值~\cite{en1,en2,en3}。
+
+\[e = mc^2 \]
 
 \nocite{*}
 \erjref
 \printbibliography[heading=none]
-% Enlish Titlepage 
-\enmaketitle
 
+% Enlish Titlepage 
+\newpage           % <--- 关键：强制新建一页
+\thispagestyle{empty} % (可选) 如果不想这页有页眉页脚，加上这一行
+\enmaketitle
 
 \end{document}
 

@@ -70,11 +70,10 @@
 \newtoks\header
 
 \usepackage{fancyhdr}
-\fancyhead{} % clear all fields
-% @author@title
-\fancyhead[LE]{\the\header}
-\fancyhead[OR]{\raisebox{-0.2\height}{\includegraphics[width=0.16\textwidth]{ERJ.png}} \raisebox{.2\height}{ \small 2019 年工作论文}}
-\fancyfoot[OR,LE]{\thepage}
+\fancyhead{} % 清除原有设置
+\fancyhead[LE]{\small \the\header}  % 偶数页左侧：显示您在 .tex 里设置的 header 内容
+\fancyhead[OR]{\small \the\year{} 年工作论文} % 奇数页右侧：显示“2025 年工作论文”
+\fancyfoot[OR,LE]{\thepage} % 页脚：页码在外侧
 \fancyfoot[C]{}
 
 \renewcommand{\headrulewidth}{0.4pt}
