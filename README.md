@@ -1,31 +1,52 @@
-# 《经济研究》杂志 LaTeX 论文模板
+<!--
+ * @Author: 孙翊铭 && eamonsuen02@gmail.com
+ * @Date: 2025-12-29 15:14:08
+ * @LastEditors: 孙翊铭 && eamonsuen02@gmail.com
+ * @LastEditTime: 2025-12-30 19:06:51
+ * @FilePath: /Chinese-ERJ/README.md
+ * @Description: 通用学术工作论文 LaTeX 模版
+ * 
+-->
 
-本模板计划启动于 2019 年 3 月 28 日，完全时间未知，欢迎参与完善。。。
+# 通用学术工作论文 LaTeX 模版 (General Academic Working Paper Template)
 
+> **Note:** 本项目 Fork 自 [EthanDeng/Chinese-ERJ](https://github.com/EthanDeng/Chinese-ERJ)，并在其基础上进行了通用化修改，旨在提供一个优雅、规范的中文经济学/管理学工作论文（Working Paper）排版方案。
 
-# 使用
+## 简介 (Introduction)
 
-推荐使用 TeX Live 2018 及之后版本进行编译，由于目前 TeX Live 2018 已经不再更新。所以用户可以通过下面几种方式获取本模板：
+原模版是为《经济研究》期刊投稿设计的专用模版。考虑到日常科研写作、课程论文以及工作论文（Working Paper）的需求，我对原模版进行了以下调整，使其更适合**通用学术写作场景**：
 
-1. 将本仓库 clone 到本地。
-2. 下载 [zip 文件](https://github.com/EthanDeng/Chinese-ERJ/archive/master.zip) 进行解压缩。
-3. 手动安装宏包的方式（不推荐）
+* **去期刊化**：移除了《经济研究》特定的期刊页眉、页脚标识，改为通用的“工作论文”样式。
+* **页眉优化**：
+    * 奇数页右侧显示年份与类型（如：`2025 年工作论文`）。
+    * 偶数页左侧显示论文类型的自定义 Header（默认为“工作论文”）。
+* **个人定制**：预设了常用的宏包配置，优化了中英文摘要页的布局。
 
-另外，由于本模板使用了 biblatex 定制《经济研究》的参考文献格式（chinese-erj），用户可以采用安装或者不安装的方式获取 biblatex-gb7714-2015 宏包。
+本模版非常适合用于：
+* 博士/硕士研究生课程论文 (Term Papers)
+* 学术工作论文 (Working Papers)
+* 研讨会展示文档 (Seminar Papers)
 
-## 不安装方式
+## 快速开始 (Quick Start)
 
-用户可以在 CTAN 或者 Github 上搜索 biblatex-gb7714-2015，下面以 CTAN 为例。
+### 1. 环境要求
+推荐使用 **TeX Live 2020** 及以上版本。本项目依赖 `ctex` 宏包处理中文，以及 `biblatex` 处理参考文献。
 
-在 [CTAN/GBT7714-2015](https://ctan.org/pkg/biblatex-gb7714-2015) 下载[最新版](http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-gb7714-2015.zip)，然后解压之后把所有扩展名为 cbx 和 bbx 以及 def 的文件全部复制粘贴到本地项目文件夹下（最重要的是 chinese-erj.bbx，chinese-erj.cbx，其他文件可以考虑不放入，出错的话则全部放入），也即之前所下载的 Chinese-ERJ 目录下。
+### 2. 获取模版
+点击本仓库右上角的 **"Use this template"** 按钮，直接基于本模版创建一个新的 GitHub 仓库开始写作。
 
-## 安装方式
+或者克隆到本地：
+```bash
+git clone [https://github.com/你的用户名/仓库名.git](https://github.com/你的用户名/仓库名.git)
+```
 
-在 [CTAN/GBT7714-2015](https://ctan.org/pkg/biblatex-gb7714-2015) 下载[最新版](http://mirrors.ctan.org/macros/latex/contrib/biblatex-contrib/biblatex-gb7714-2015.zip)，然后解压之后把所有扩展名为 cbx 和 bbx 以及 def 的文件全部复制粘贴到（`C:\texlive\2018\texmf-dist\tex\latex\biblatex-gb7714-2015`）并选择替换覆盖，然后把剩余文件全部复制粘贴到 `C:\texlive\2018\texmf-dist\doc\latex\biblatex-gb7714-2015`下并选择替换覆盖。最后再使用管理员权限打开命令提示符（cmd），运行 `texhash` 即可。
-
-# 编译方式
+### 3. 编译方式
 
 编译方式可以选择 `PDFLaTeX` 或者 `XeLaTeX`，注意一定要在编译过程中运行 biber：
 
 1. xelatex -> biber -> xelatex -> xelatex
 2. pdflatex -> biber -> pdflatex -> pdflatex
+
+## 特别说明
+
+由于本模板使用了 biblatex 定制《经济研究》的参考文献格式（chinese-erj），用户可以采用安装或者不安装的方式获取 biblatex-gb7714-2015 宏包。
