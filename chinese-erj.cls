@@ -48,9 +48,13 @@
 \graphicspath{{image/}{figure/}{fig/}{img/}}
 
 % caption settings
-\RequirePackage[font=small,labelfont={bf}]{caption}
-\captionsetup[table]{skip=3pt}
+\RequirePackage[font=small,labelfont={bf},labelsep=quad]{caption}\captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
+
+\ctexset{
+    figurename = {图},
+    tablename  = {表}
+}
 
 % list/itemize/enumerate setting
 \RequirePackage[shortlabels,inline]{enumitem}
